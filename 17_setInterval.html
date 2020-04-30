@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17_setInterval</title>
+  </head>
+  <body>
+    <button class="btn">취소</button>
+
+    <script>
+      let timeId;
+      const btn = document.querySelector(".btn");
+
+      function sample() {
+        console.log("sample!");
+      }
+
+      timeId = setInterval(sample, 1000);
+
+      btn.addEventListener("click", function () {
+        clearInterval(timeId);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>07_DOM Script</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script>
+      //window.addEventListener('load',()=>{});
+      window.addEventListener("DOMContentLoaded", function () {
+        const ilbuni = document.querySelector(".ilbuni.c");
+        console.log(ilbuni);
+
+        const clickIlbuniHandler = () => {
+          ilbuni.classList.toggle("special");
+        };
+
+        ilbuni.addEventListener("click", clickIlbuniHandler);
+      });
+    </script> -->
+  </head>
+  <body>
+    <div class="characters">
+      <div class="ilbuni a">
+        <img src="images/ilbuni_0.png" alt="일분이" />
+      </div>
+      <div class="ilbuni b">
+        <img src="images/ilbuni_1.png" alt="일분이" />
+      </div>
+      <div class="ilbuni c">
+        <img src="images/ilbuni_2.png" alt="일분이" />
+      </div>
+      <div class="ilbuni d">
+        <img src="images/ilbuni_3.png" alt="일분이" />
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const characters = document.querySelector(".characters");
+
+        const clickIlbuniHandler = () => {
+          console.log(this);
+          console.log(e.currentTarget);
+          console.log(e.target);
+        };
+
+        characters.addEventListener("click", clickIlbuniHandler);
+      })();
+    </script>
+  </body>
+</html>

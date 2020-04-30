@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_object</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+
+    <script>
+      //생성자 (constructor)
+      function Person(nickName, age) {
+        this.nickName = nickName;
+        this.age = age;
+      }
+
+      Person.prototype.introduce = function () {
+        console.log("안녕하세요? " + this.nickName + "에요");
+      };
+
+      //인스턴스(instance)
+      const person1 = new Person("일분이", 10);
+      const person2 = new Person("이분이", 20);
+
+      person1.introduce();
+      person2.introduce();
+    </script>
+  </body>
+</html>
